@@ -1,0 +1,152 @@
+2.1
+VS Code 準拠
+Ctrl は C
+Shift は S
+Alt は A と記述
+C-{kr} ショートカットキー一覧
+1)
+なし 自身で設定する
+2)
+エディタ画面
+C-{\} 右に分割
+C-{k\} 下に分割
+C-{w} 画面を閉じる
+ターミナル画面
+CS-{Number5} 右に分割
+exitコマンド 画面を閉じる
+3)
+エディタ画面
+C-{Number} 押した数字の画面に移動 数字は左から順に大きくなる
+ターミナル画面
+A-{arrow} 画面移動
+4)
+エディタ画面
+同じものは開けない
+C-{w} 画面を閉じる
+C-{kw} 画面をすべて閉じる
+ターミナル画面
+CS-{Number0} 新しくターミナルを開く
+exitコマンド 画面を閉じる
+5)
+エディタ画面
+C-{c} コピー
+C-{v} ペースト
+ターミナル画面
+CS-{c} コピー
+CS-{v} ペースト
+どちらの場合でも
+C-{Insert} コピー
+S-{Insert} ペースト
+6)
+エディタ画面
+C-{x} カット
+C-{v} ペースト
+ターミナル画面
+なし
+7)
+どちらの場合でも
+C-{f} 文字列の検索
+8)
+C-{h} 検索と置換画面が開く
+
+2.2
+1)
+./emacs & で起動
+2)
+C-z でコマンド中断後、bg とタイプする
+3)
+ターミナル画面
+diff <file 1> <file 2> : file 1とfile 2の違いを表示する
+4)
+ターミナル画面
+pwd : 現在いるディレクトリ名を表示
+5)
+ターミナル画面
+cd - : 一つ前にいたディレクトリに移動
+6)
+du : ディスク使用率を表示
+7)
+wc <file> : fileの行数、単語数、バイト数、fileの名前が表示
+wc <file> -m : fileの文字数、fileの名前が表示
+wc <file> -l : fileの行数、fileの名前が表示
+8)
+nkf <file> -g : 文字コードの判定
+9)
+nkf <file> -w : UTF-8 コードに変換
+
+2.3
+1)
+マウスの左側ボタンをダブルクリック
+2)
+マウスの中央ボタンをクリック
+
+2.4
+1)
+lpstat -p : プリンタの状況の確認
+2)
+cancel <request_id> : request_id の印刷要求の取り消し
+
+2.5
+1)
+locate math.h
+locate <file> : fileがあるパスの表示
+2)
+which ls
+which <command> : そのコマンドがどのパスから呼び出されているか表示
+
+2.6
+1)
+alias em=’emacs’ : em エイリアスの作成
+2)
+unalias em : 一時的に em のエイリアスを無効にする
+3)
+alias em : 現在 em がどのようなエイリアスになっているかを確認
+4)
+エイリアスを継続的に無効にしたい場合、.bashrc のエイリアス設定を消去する
+
+2.7
+1)
+mkdir c
+mkdir tmp
+2)
+cd tmp
+3)
+ln -s ../c c
+4)
+ls c 
+5)
+cd c
+6)
+cd ..
+7)
+rm c 
+8)
+rm -r c tmp
+
+2.8
+1) 問題が存在しない
+2)
+ls -lR > ls-lR
+3)
+grep PI math.h
+4)
+tail  -50 <file> | less
+5)
+head -50 <file> | less
+6)
+cut -d "," -f 2 <file>
+7) 問題が存在しない
+8)
+paste data1.txt data2.txt > data3.txt 
+
+2.9
+1)
+sed -e "s/ //g" <file>
+2)
+sed -e "s/     /	/g" <file> > <file>
+ただし、ターミナルでのタブ入力時はC-v tab と入力する。
+あるいは \t を使用する。
+3)
+sed -e "s/^ *//" -e "s/^	*//" <file>
+ただし、ターミナルでのタブ入力時はC-v tab と入力する。
+あるいは \t を使用する。
