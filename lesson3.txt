@@ -1,0 +1,14 @@
+1)
+apt list
+2)
+apt upgrade
+3)
+apt install <package>
+4)
+apt install apt-file
+apt-file update
+apt-file search <file>
+5)
+apt install apt-file
+apt-file update
+apt-file list <package>
