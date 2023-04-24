@@ -1,0 +1,45 @@
+1.1
+Ctrl は C
+Shift は S
+Alt は A と記述
+linuxにおけるコンソール関連のショートカットキーは以下
+CA-{F1} GUIのログイン画面に切り替える
+CA-{F2} 仮想コンソールから戻る
+CA-{F3〜F6} 仮想コンソールに切り替える
+CA-{F7} GUIモードに切り替え
+CA-{F8-F12} 余り
+1)
+CA-{F3〜F6} で仮想コンソールに切り替える
+ユーザ名及びパスワードを打ち込みログインを行う。
+2)
+方法１
+C-{c] の入力を行った。
+方法2
+ps auxw |grep yes でPIDを調べ、
+kill PID でプロセスを停止した。
+また、ps auxw では
+USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND の順に表示され
+USER はユーザ名
+PID はプロセスID
+%CPU はプロセスのCPUの使用率
+%MEM はプロセスのメモリの使用率
+VSZ プロセスが確保している仮想メモリサイズ
+RSS プロセスが確保している物理メモリサイズ
+TTY プロセスが実行されているコンソール
+STAT プロセスの状態を示す
+START プロセスが開始した時刻
+TIME プロセスがCPUを使用した時間
+COMMAND 実行されているコマンドの名前とオプション を表す。
+方法3
+top コマンド
+S-{l} yes でPIDを確認
+k PID 入力後 Enterを２回押してプロセス終了
+3)
+C-{q}
+4)
+killall yes 
+5)
+C-{d} あるいは
+exit と入力する。
+6)
+CA-{F2}
