@@ -1,0 +1,1 @@
+/home/hera/higashi/bin/bzdir.sh
