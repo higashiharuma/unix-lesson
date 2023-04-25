@@ -1,2 +1,32 @@
 4.1
 1)
+指定の arg.sh を作り
+chmod +x arg.sh で許可をだし
+./arg.sh "a b" 3 a b をしたところ
+以下の出力が得られた。
+これが引数の数 4
+これが第 0 引数 ./arg.sh
+これが第 1 引数 a b
+これが全ての引数 a b 3 a b
+2)
+mv arg.sh ~/bin arg.sh をホームディレクトリのbin に移動
+PATH=$PATH:~/bin > ~/.bashrc ホームディレクトリの.bashrc にPATHを追加
+export PATH PATHの設定
+source ~/.bashrc bashrcを読み込む
+以上によって arg.sh がどこのディレクトリでも
+実行コマンド ./ なしで実行できるようになった。
+
+4.2
+1)
+指定の bzdir.sh を作り
+chmod +x bzdir.sh で許可をだし
+mv bzdir.sh ~/bin bzdir.sh をホームディレクトリのbinに移動
+PATH=$PATH:~/bin > ~/.bashrc ホームディレクトリの.bashrc にPATHを追加
+export PATH PATHの設定
+source ~/.bashrc bashrcを読み込む
+bzdir <directory name> で実行
+
+プログラムは別ファイルのbzdir.shを参照
+
+2)
+
