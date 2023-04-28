@@ -1,0 +1,15 @@
+5.1
+1)
+プログラムは別ファイルのconnect.shを参照
+2)
+mv connect.sh ~/bin/
+cd ~/bin/
+ln -s ~/bin/connect.sh venus
+ln -s ~/bin/connect.sh atlas
+3)
+chmod +x connect2.sh まず実行の許可を出す。
+
+
+ぱすがとうらね
+
+プログラムは別ファイルのconnect2.shを参照
