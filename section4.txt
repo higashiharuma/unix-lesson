@@ -29,4 +29,10 @@ bzdir <directory name> で実行
 プログラムは別ファイルのbzdir.shを参照
 
 2)
+プログラムは別ファイルのbzdir2.shを参照
 
+3)
+プログラムは別ファイルのbzdir3.shを参照
+
+4)
+プログラムは別ファイルのgz2bz.shを参照
