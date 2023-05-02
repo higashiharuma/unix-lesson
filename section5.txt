@@ -57,3 +57,9 @@ permission w 権限を持つのがプログラムの書き換えや削除権限�
 5)
 chmod g+r ~/public/tmp/pochi/dog.c グループにプログラムの読み取りの権限を与える
 chmod g+w ~/public/tmp/pochi/dog.c グループにプログラムの書き込みの権限を与える
+
+6)
+現在のディレクトリにあるファイル一覧を，permission情報とともに表示する方法
+ls -l は現在のディレクトリにあるファイル一覧をpermission情報とともに表示します。
+
+また ls -ld は現在のディレクトリのpermission情報等を表示します。
