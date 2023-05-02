@@ -4,12 +4,56 @@
 2)
 mv connect.sh ~/bin/
 cd ~/bin/
-ln -s ~/bin/connect.sh venus
-ln -s ~/bin/connect.sh atlas
+ln -s connect.sh venus
+ln -s connect.sh atlas
 3)
-chmod +x connect2.sh まず実行の許可を出す。
-
-
-ぱすがとうらね
+修正したスクリプトの名前を connect2.sh とする
+chmod +x connect2.sh まず実行の許可を出す
 
 プログラムは別ファイルのconnect2.shを参照
+
+5.2
+1)
+scp hoge.c venus:~/
+2)
+scp venus:hoge2.c .
+
+5.3
+1)
+ユーザ名、パスワードを入力してログイン
+2)
+mkdir ~/public/tmp/pochi
+3)
+ls -ld ~/public/tmp/pochi 
+上記のコマンドを実行すると以下のような結果が得られる
+permission hardlinks owner group  size  Month Day Time Directory
+この結果の内特に permission に注目する
+permission は11個の文字列で表示される(ex.drwxr-xr-x)
+以下は上記の例に基づいて説明する
+また説明を簡単にするため例の左から順に1桁、2桁と指すこととする
+1桁目はファイルの種別を表す
+2-4桁目は所有者(コマンドの結果でのowner)のファイルに対する権限
+5-7桁目は所有グループ(コマンドの結果でのgroup)のファイルに対する権限
+8−11桁目はその他のユーザのファイルに対する権限 を表す
+上記の例(ex.drwxr-xr-x)では
+ファイルはディレクトリで
+所有者は読み取り、書き込み、実行の権限を持ち、
+所有グループとその他のユーザは読み取りと実行の権限を持っていることがわかる
+
+改めて設問に戻って答えると
+ls -ld ~/public/tmp/pochi コマンドでアクセス権限を持つユーザを確認できる
+また、このディレクトリの中のファイル一覧を参照できる権限を持つユーザは
+permission で r の権限を持つユーザ
+中のファイル削除や名前変更等ができる権限を持つユーザは、
+permission で w の権限を持つユーザ
+中に cd できる権限を持つユーザは、
+permission で x の権限を持つユーザ である。
+
+4)
+/home/public/tmp/pochi/dog.c というプログラムに対して、
+permission r 権限を持つのがプログラムの読み込み権限を持つユーザ、
+permission w 権限を持つのがプログラムの書き換えや削除権限を持つユーザである
+
+5)
+chmod g+r ~/public/tmp/pochi/dog.c グループにプログラムの読み取りの権限を与える
+chmod g+w ~/public/tmp/pochi/dog.c グループにプログラムの書き込みの権限を与える
