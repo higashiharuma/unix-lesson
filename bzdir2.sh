@@ -8,10 +8,8 @@ for i in ${@}; do
 	if [ ! -d ${i} ] ; then 
 		echo "ディレクトリ ${i} が存在しません。"
 		exit 1
+	else
+		#圧縮の実行
+		tar czvf ${i}.tar.bz2 ${i}
 	fi
-done
-
-#圧縮の実行
-for i in $@; do
-	tar czvf ${i}.tar.bz2 ${i}
 done
