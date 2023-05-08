@@ -9,8 +9,8 @@ ln -s connect.sh atlas
 3)
 修正したスクリプトの名前を connect2.sh とする
 chmod +x connect2.sh まず実行の許可を出す
-PATHを通せばスクリプト名のみで 実行が可能になる
-export PATH=$PATH:スクリプトファイルのディレクトリ
+PATHを通せばシンボリックリンク名のみで 実行が可能になる
+export PATH=$PATH:シンボリックリンクのディレクトリ
 
 プログラムは別ファイルのconnect2.shを参照
 
